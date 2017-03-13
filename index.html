@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0;
+      background-color: lightblue; }
+      h1 {
+          text-align: center;
+          color: dodgerblue;
+      }
+      #map { height: 80%;
+      width:80%;
+      margin:auto; }
+    </style>
+  </head>
+  <body>
+      <h1>Aqui esta mi casa en google map</h1>
+    <div id="map"></div>
+    <script type="text/javascript">
+
+var map;
+function initMap() {
+    var myLatLng={lat: 13.4919, lng: -88.1686}
+
+    map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 17
+  });
+
+//var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+var marker = new google.maps.Marker({
+    position: myLatLng,
+    map:map,
+    title:"El google map de mi casa!"
+    });
+}
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1ZI9beZ09b9RcECXsgtzXQUeQoHk_GB4&callback=initMap">
+    </script>
+  </body>
+</html>
+
+
+
